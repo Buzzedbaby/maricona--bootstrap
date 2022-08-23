@@ -1,0 +1,658 @@
+
+ul {
+    list-style: none;
+    background-color: white;
+    border: 5px;
+    font-size: 0;
+}
+li {
+    display: inline-block;
+    width: 0%;
+    position: relative;
+    font-size: 45px;
+    font-family:'Share Tech Mono', monospace;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+li a {
+    text-decoration: none;
+   
+}
+li a:hover {
+    color: yellow;
+}
+ul li {
+    font-size: 20px;
+    font-family:'Share Tech Mono', monospace;
+    text-align: center;
+}
+.barra-arriba {
+    font-size: 30px;
+    font-family:'Share Tech Mono', monospace;
+    text-align: center;
+    display: inline-block;
+} 
+#grilla-nosotros {
+    display: grid;
+    grid-template-areas: 
+        "vertical titulo"
+        "vertical parrafo"
+        "vertical parrafo"
+        "footer footer";
+        grid-template-columns: 7% 1fr;
+        grid-template-rows: 1fr 1fr 1fr
+}
+@media only screen and (min-width: 250px){
+  #grilla-nosotros {
+    display: grid;
+    grid-template-areas: 
+        "vertical titulo"
+        "vertical parrafo"
+        "vertical parrafo"
+        "footer footer";
+        grid-template-columns: 7% 1fr;
+        grid-template-rows: 70px 1fr 1fr
+  }
+}
+@media only screen and (max-width: 444px){
+  #grilla-nosotros {
+    display: grid;
+    grid-template-areas: 
+        "vertical titulo"
+        "vertical parrafo"
+        "vertical parrafo"
+        "footer footer";
+        grid-template-columns: 7% 1fr;
+        grid-template-rows: 120px 1fr 1fr
+  }
+}
+.portada-nosotros {
+    width: 100%;
+    height: auto;
+    background-color: lightskyblue;
+}
+.título-nosotros {
+    font-size: 40px;
+    text-align: center;
+    font-family:'Share Tech Mono', monospace;
+    color: yellow;
+    text-transform: uppercase;
+    animation-duration: 2s;
+    animation-name: aparece;
+    animation-delay: 4s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite ;
+}
+@keyframes aparece {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.titulonosotros {
+    grid-area: titulo;
+    background-color: lightskyblue;
+}
+.párrafo-nosotros {
+    font-size: 20px;
+    font-family:'Share Tech Mono', monospace;
+    text-align: center;
+    margin: 30px;
+}
+.parrafonosotros {
+    grid-area: parrafo;
+    background-color: lightskyblue;
+}
+#grilla-contacto {
+  display: grid;
+  grid-template-areas: 
+      "titulo "
+      "formulario"
+      "formulario"
+      "footer";
+      grid-template-columns: 1fr;
+  background-color: lightskyblue;
+}
+@media only screen and (max-width: 1005px){
+  #grilla-contacto {
+    display: grid;
+    grid-template-areas: 
+        "titulo"
+        "formulario"
+        "pregunta"
+        "foto"
+        "footer ";
+        grid-template-columns: 1fr;
+        background-color: lightskyblue;
+  }
+  .portada-contacto {
+    background-color: lightskyblue;
+    width: 100%;
+    height: auto
+}
+}
+@media only screen and (max-width: 650px){
+    #grilla-contacto {
+      display: grid;
+      grid-template-areas: 
+          "titulo"
+          "formulario"
+          "pregunta"
+          "foto"
+          "footer ";
+          grid-template-columns: 1fr;
+          background-color: lightskyblue;
+    }
+    .portada-contacto {
+      background-color: lightskyblue;
+      width: 100%;
+      height: auto
+  }
+    .formulario-contacto {
+      grid-area: formulario;
+      background-color: deeppink;
+      font-family:'Share Tech Mono', monospace;
+      font-size: 16px;
+  } 
+}
+.portada-contacto {
+    background-color: lightskyblue;
+    width: 100%;
+    height: auto
+}
+.titulo-contacto.grid {
+    grid-area: titulo;
+    background-color: lightskyblue;
+}
+.título-contacto {
+    font-size: 40px;
+    text-align: center;
+    margin: 2px;
+    color: yellow;
+    font-family:'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    animation-duration: 2s;
+    animation-name: aparece;
+    animation-delay: 4s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite ;
+}
+@keyframes aparece {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.formulario-contacto {
+    grid-area: formulario;
+    background-image: linear-gradient(pink , lightskyblue , yellow);
+    font-family:'Share Tech Mono', monospace;
+    font-size: 16px;
+    margin: 20px 50px 50px 50px;
+    padding: 20px
+}
+.pregunta-contacto {
+    grid-template-columns: pregunta;
+    text-align: left;
+}
+.imagen-contacto {
+    grid-area: foto;
+    z-index: 3;
+    top: 1px;
+    left: 800px;
+    top: 150px;
+    padding-left: 50px;
+    transition: 0.9s;
+
+}
+.imagen-contacto:hover{
+    transform: scale(0.9);
+}
+.portada-nueva-coleccion {
+    background-color: lightskyblue;
+    width: 100%;
+    height: 700px;
+}
+.titulo-nueva-colección {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+    color: yellow;
+    font-family:'Share Tech Mono', monospace;
+} 
+.fotos-nueva-coleccion {
+    background-color: lightskyblue;
+    list-style: none;
+}
+.nc {
+    display: inline-block;
+    width: 0%;
+    position: relative;
+    font-size: 25px;
+    font-family:'Share Tech Mono', monospace;
+    text-align: center;
+    margin-right: 180px;
+}
+.portada-principal {
+    height: auto;
+    width: 100%;
+}
+#grilla {
+    display: grid;
+    grid-template-areas: 
+        "vertical foto header"
+        "vertical foto section"
+        "vertical foto boton"
+        "vertical abajo abajo"
+        "footer footer footer";
+        grid-template-columns: 7% 40% 53%;
+        grid-template-rows: 200px 150px 150px 70px;
+        background-color: lightskyblue;
+}
+@media only screen and (max-width: 995px){
+    #grilla {
+        grid-template-areas:
+          "vertical header"
+          "vertical section"
+          "vertical boton"
+          "vertical foto"
+          "vertical abajo"
+          "footer footer";
+        grid-template-columns: 7% 1fr;
+        grid-template-rows: 200px 50px 50px 450px 100px
+    }
+}
+@media only screen and (max-width: 610px){
+  #grilla {
+      grid-template-areas:
+        "vertical header"
+        "vertical section"
+        "vertical boton"
+        "vertical foto"
+        "vertical abajo"
+        "footer footer";
+      grid-template-columns: 20% 1fr;
+      grid-template-rows: 200px 70px 70px 450px;
+  }
+  .portada-principal {
+    background-color: lightskyblue;
+  }
+  .imagen-portada {
+    grid-area: foto;
+    background-color: #87cefa;
+    margin: 5px 5px 0px 5px;
+  }
+}
+header {
+    grid-area: header;
+    background-color: lightskyblue;
+}
+.nueva-generación {
+    font-size: 60px;
+    font-family:'Share Tech Mono', monospace;
+    font-weight: 600;
+    color: yellow;
+    text-align: center;
+    padding: 1px 1px 1px 1px;
+    text-transform: uppercase;
+    animation-duration: 2s;
+    animation-name: aparece;
+    animation-delay: 4s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite ;
+}
+@keyframes aparece {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.barra-vertical {
+    grid-area: vertical;
+    background-image: linear-gradient(pink , lightskyblue , yellow);
+    text-align: justify;
+   /* transform: rotate(270deg);*/
+    font-size: 35px;
+    text-align: justify;
+    font-family:'Share Tech Mono', monospace;
+}
+.texto.vertical {
+    transform: rotate(270deg);
+    height: 300px;
+}
+section {
+    grid-area: section;
+    background-color: lightskyblue;
+}
+.subtitulo{
+    font-size: 30px;
+    font-family:'Share Tech Mono', monospace;
+    font-weight: 600;
+    color:white;
+    text-align: center
+}
+.botondescubrir{
+    grid-area: boton;
+    text-align: center;
+    background-color: lightskyblue;
+    margin: 100px;
+    text-decoration: none;
+}
+.boton-descubrir{
+    font-size: 30px;
+    font-family:'Share Tech Mono', monospace;
+    font-weight: 60px;
+    
+}
+.imagen-portada {
+    grid-area: foto;
+    margin: 45px 35px 0px 75px;
+    background-color: lightskyblue
+}
+.barra-abajo {
+    grid-area: abajo;
+    background-color: yellow;
+    background-image: linear-gradient(to left , pink , lightskyblue , yellow);
+    width: 100%;
+    height: 100px;
+    font-family:'Share Tech Mono', monospace;
+    font-size: 35px;
+    text-align: justify;
+    align-items: center;
+}
+footer {
+    grid-area: footer;
+    background-color: white;
+}
+.footer {
+    font-family:'Share Tech Mono', monospace;
+    font-size: 20px;
+    text-align: justify;
+}
+.portada-productos {
+    background-image: linear-gradient(to left , pink , lightskyblue , yellow);
+    width: 100%;
+    margin: 0;
+    padding: 0
+}
+.titulo-productos {
+    font-size: 40px;
+    text-align: center;
+    margin: 2px;
+    color: yellow;
+    font-family:'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    animation-duration: 2s;
+    animation-name: aparece;
+    animation-delay: 4s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite ;
+}
+@keyframes aparece {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.galeria {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-image: linear-gradient(to left , pink , lightskyblue , yellow);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(1, 360px);
+    grid-gap: 10px
+}
+@media only screen and (max-width: 1100px){
+    .galeria {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(1, 360px);}
+    }
+    @media only screen and (max-width: 650px){
+        .galeria {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, 360px);}
+        }
+/*.item {
+    height: auto;
+    width: 100%;
+    background-color: palevioletred;
+    border: 2px solid yellow;
+    box-sizing: border-box;
+}
+.item1 {
+    background-image: url(imagenes/Campera\ Flores.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.9s;
+}
+.item1:hover{
+    transform: scale(0.9);
+}
+.item2 {
+    background-image: url(imagenes/Campera\ flores\ rosa.jpeg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.9s;
+}
+.item2:hover{
+    transform: scale(0.9);
+}
+.item3 {
+    background-image: url(imagenes/Camperón.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.9s;
+}
+.item3:hover{
+    transform: scale(0.9);
+}
+.item4 {
+    background-image: url(imagenes/Chaleco\ campo.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.9s;
+}
+.item4:hover{
+    transform: scale(0.9);
+}
+.item5 {
+    background-image: url(imagenes/Chaleco\ nubes.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.9s;
+}
+.item5:hover{
+    transform: scale(0.9);
+}
+.item6 {
+    background-image: url(imagenes/Conjunto\ rosa\ bebé.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.9s;
+}
+.item6:hover{
+    transform: scale(0.9);
+}*/
+
+    /*.item1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .item2 {
+        grid-column: 2/3 ;
+        grid-row: 1/2;
+    }
+    .item3 {
+        grid-column: 1/2 ;
+        grid-row: 2/3;
+    }
+    .item4 {
+        grid-column: 2/3 ;
+        grid-row: 2/3 ;
+    }
+    .item5 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .item6 {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        }
+}
+.item1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.item2 {
+    grid-column: 2/3 ;
+    grid-row: 1/2 ;
+}
+.item3 {
+    grid-column: 3/4 ;
+    grid-row: 1/3;
+}
+.item4 {
+    grid-column: 2/3 ;
+    grid-row: 2/4 ;
+}
+.item5 {
+    grid-column: 1/2;
+    grid-row: 3/4 ;
+}
+.item6 {
+    grid-column: 3/4;
+    grid-row: 3/4 ;
+}*/
+.portada-descubrir {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.titulo-descubrir {
+  font-size: 40px;
+  text-align: center;
+  margin: 2px;
+  color: yellow;
+  font-family:'Share Tech Mono', monospace;
+  text-transform: uppercase;
+    animation-duration: 2s;
+    animation-name: aparece;
+    animation-delay: 4s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite ;
+}
+@keyframes aparece {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.galeria-descubrir {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-image: linear-gradient(to left , pink , lightskyblue , yellow);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 220px 220px;
+  grid-gap: 10px
+}
+/*.foto {
+  height: auto;
+  width: 100%;
+  background-color: palevioletred;
+  border: 2px solid yellow;
+  box-sizing: border-box;
+}
+.foto1 {
+  background-image: url(imagenes/Camperón.jpg);
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.9s;
+}
+.foto1:hover{
+    transform: scale(0.9);
+}
+.foto2 {
+  background-image: url(imagenes/Campera\ flores\ rosa.jpeg);
+  height: 360px;  
+  background-size: cover;
+  background-position: center;
+  transition: 0.9s;
+}
+.foto2:hover{
+    transform: scale(0.9);
+}
+.foto3 {
+  background-image: url(imagenes/Chaleco\ nubes.jpg);
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.9s;
+}
+.foto3:hover{
+    transform: scale(0.9);
+}
+.foto4 {
+  background-image: url(imagenes/Chaleco\ campo.jpg);
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.9s;
+}
+.foto4:hover{
+    transform: scale(0.9);
+}
+.foto1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.foto2 {
+  grid-column: 2/3 ;
+  grid-row: 1/3;
+}
+.foto3 {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.foto4 {
+  grid-column: 4/5 ;
+  grid-row: 1/3;
+}*/
+@media only screen and (max-width: 720px){
+  .galeria-descubrir {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 360px);}
+      /*.foto1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+      .foto2 {
+        grid-column: 2/3 ;
+        grid-row: 1/2;
+      }
+      .foto3 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+      .foto4 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+*/
+}
