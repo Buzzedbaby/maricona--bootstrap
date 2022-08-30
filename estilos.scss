@@ -19,15 +19,16 @@ $color1: lightskyblue;
 $color2: yellow;
 $color3: linear-gradient(yellow , lightskyblue , pink);
 .barra-vertical{
+    display: flex;
     grid-area: vertical;
     background-image: $color3;
-    text-align: justify;
+    text-align: center;
     font-size: 35px;
     font-family:'Share Tech Mono', monospace;
-    transform: rotate(180deg);
     margin: 0px;
     .texto-vertical{ 
-        transform: rotate(90deg);       
+        transform: rotate(270deg);
+        white-space: nowrap;    
     }
 }  
 .nueva-generación {
@@ -90,7 +91,7 @@ $color3: linear-gradient(yellow , lightskyblue , pink);
         "vertical foto titulo"
         "vertical foto subtitulo"
         "vertical foto boton"
-        "abajo abajo abajo";
+        "vertical abajo abajo";
         grid-template-columns: 10% 40% 50%;
         grid-template-rows: 200px 150px 120px 90px;
         background-color: $color1;

@@ -18,16 +18,17 @@ ul li {
 
 /*Index*/
 .barra-vertical {
+  display: flex;
   grid-area: vertical;
   background-image: linear-gradient(yellow, lightskyblue, pink);
-  text-align: justify;
+  text-align: center;
   font-size: 35px;
   font-family: "Share Tech Mono", monospace;
-  transform: rotate(180deg);
   margin: 0px;
 }
 .barra-vertical .texto-vertical {
-  transform: rotate(90deg);
+  transform: rotate(270deg);
+  white-space: nowrap;
 }
 
 .nueva-generación {
@@ -91,7 +92,7 @@ ul li {
 
 #grilla {
   display: grid;
-  grid-template-areas: "vertical foto titulo" "vertical foto subtitulo" "vertical foto boton" "abajo abajo abajo";
+  grid-template-areas: "vertical foto titulo" "vertical foto subtitulo" "vertical foto boton" "vertical abajo abajo";
   grid-template-columns: 10% 40% 50%;
   grid-template-rows: 200px 150px 120px 90px;
   background-color: lightskyblue;
