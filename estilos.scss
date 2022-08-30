@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+ul {
+    list-style: none;
+    background-color: pink;
+    li {
+        display: inline-block;
+        width: 0%;
+        position: relative;
+        font-family:'Share Tech Mono', monospace;
+        text-align: center;
+        margin-left: 130px;
+        font-size: 20px;
+        font-family:'Share Tech Mono', monospace;
+        text-align: center;
+    }
+}
+/*Index*/
+$color1: lightskyblue;
+$color2: yellow;
+$color3: linear-gradient(yellow , lightskyblue , pink);
+.barra-vertical{
+    grid-area: vertical;
+    background-image: $color3;
+    text-align: justify;
+    font-size: 35px;
+    font-family:'Share Tech Mono', monospace;
+    transform: rotate(180deg);
+    margin: 0px;
+    .texto-vertical{ 
+        transform: rotate(90deg);       
+    }
+}  
+.nueva-generación {
+    grid-area: titulo;
+    font-size: 60px;
+    font-family:'Share Tech Mono', monospace;
+    font-weight: 600;
+    height: 10%;
+    color: $color2;
+    text-align: center;
+    text-transform: uppercase;
+    animation-duration: 2s;
+    animation-name: aparece;
+    animation-delay: 4s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite ;
+}
+@keyframes aparece {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.subtitulo{
+    grid-area: section;
+    font-size: 30px;
+    font-family:'Share Tech Mono', monospace;
+    font-weight: 600;
+    color:white;
+    text-align: center
+}
+.boton-descubrir{
+    grid-area: boton;
+    font-size: 30px;
+    font-family:'Share Tech Mono', monospace;
+    font-weight: 60px;
+    background-color: pink;
+}
+.imagen-portada {
+    grid-area: foto;
+    background-position: center;
+}
+.barra-abajo {
+    grid-area: abajo;
+    background-image: $color3;
+    width: 100%;
+    height: auto;
+    font-family:'Share Tech Mono', monospace;
+    font-size: 35px;
+    text-align: center;
+    align-items: center;
+    width: auto;
+    padding: 10px;
+}
+#grilla {
+    display: grid;
+    grid-template-areas: 
+        "vertical foto titulo"
+        "vertical foto subtitulo"
+        "vertical foto boton"
+        "abajo abajo abajo";
+        grid-template-columns: 10% 40% 50%;
+        grid-template-rows: 200px 150px 120px 90px;
+        background-color: $color1;
+        margin: 0px;
+}
+@media only screen and (max-width: 950px){
+    #grilla {
+        grid-template-areas:
+        "vertical titulo"
+        "vertical subtitulo"
+        "vertical boton"
+        "vertical foto"
+        "abajo abajo ";
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 150px 70px 100px 400px 150px;
+        background-color: $color1;
+        margin: 0px;
+    }
+    .barra-abajo {
+        height: 150px;
+    }
+}
+@media only screen and (max-width: 520px){
+    #grilla {
+        grid-template-areas:
+        "vertical titulo"
+        "vertical subtitulo"
+        "vertical boton"
+        "vertical foto"
+        "abajo abajo ";
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 150px 70px 150px 400px 150px;
+        background-color: $color1;
+        margin: 0px;
+    }
+    .imagen-portada{
+        align-self: center;
+        height: 400px;
+        width: auto;
+    }
+    .barra-abajo {
+        height: 150px;
+    }
+    .nueva-generación {
+        grid-area: titulo;
+        font-size: 40px;
+    }
+}
+.footer {
+    grid-area: footer;
+    font-family:'Share Tech Mono', monospace;
+    font-size: 20px;
+    text-align: center;
+    background-color: pink;
+    width: 100%;
+}
+/*Contacto*/
+#grilla-contacto {
+    display: grid;
+    grid-template-areas: 
+        "titulo "
+        "formulario"
+        "formulario";
+        grid-template-columns: 1fr;
+    background-color: lightskyblue;
+  }
+  @media only screen and (max-width: 1005px){
+    #grilla-contacto {
+      display: grid;
+      grid-template-areas: 
+          "titulo"
+          "formulario"
+          "pregunta"
+          "foto";
+          grid-template-columns: 1fr;
+          background-color: lightskyblue;
+    }
+    .portada-contacto {
+      background-color: lightskyblue;
+      width: 100%;
+      height: auto
+      }
+  }
+  @media only screen and (max-width: 650px){
+      #grilla-contacto {
+        display: grid;
+        grid-template-areas: 
+            "titulo"
+            "formulario"
+            "pregunta"
+            "foto";
+            grid-template-columns: 1fr;
+            background-color: lightskyblue;
+      }
+      .portada-contacto {
+        background-color: lightskyblue;
+        width: 100%;
+        height: auto
+      }
+      .formulario-contacto {
+        grid-area: formulario;
+        background-color: deeppink;
+        font-family:'Share Tech Mono', monospace;
+        font-size: 16px;
+      } 
+  }
+.portada-contacto {
+    background-color: lightskyblue;
+    width: 100%;
+    height: auto
+}
+.titulo-contacto.grid {
+    grid-area: titulo;
+    background-color: lightskyblue;
+}
+.título-contacto {
+    font-size: 40px;
+    text-align: center;
+    margin: 2px;
+    color: yellow;
+    font-family:'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    animation-duration: 2s;
+    animation-name: aparece;
+    animation-delay: 4s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite ;
+}
+    @keyframes aparece {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+.formulario-contacto {
+    grid-area: formulario;
+    background-image: linear-gradient(pink , lightskyblue , yellow);
+    font-family:'Share Tech Mono', monospace;
+    font-size: 16px;
+    margin: 20px 50px 50px 50px;
+    padding: 20px
+}
+/*Nosotros*/
+#grilla-nosotros {
+    display: grid;
+    grid-template-areas: 
+        "vertical titulo"
+        "vertical parrafo";
+        grid-template-columns: 10% 1fr;
+        grid-template-rows: 70px 1fr;
+        background-color: $color1;
+        margin: 0px;
+}
+.título-nosotros {
+    font-size: 40px;
+    text-align: center;
+    font-family:'Share Tech Mono', monospace;
+    color: yellow;
+    text-transform: uppercase;
+    animation-duration: 2s;
+    animation-name: aparece;
+    animation-delay: 4s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite ;
+
+    .titulonosotros {
+        grid-area: titulo;
+
+        @keyframes aparece {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+}
+.parrafonosotros {
+    margin: 30px;
+    text-align: justify;
+    font-size: 20px;
+    font-family:'Share Tech Mono', monospace;
+
+    .parrafo-nosotros {
+        grid-area: parrafo;
+        width: 100%;
+    }
+}
+/*Descubrir*/
+.titulo-descubrir {
+    grid-area: titulo;
+    font-size: 40px;
+    text-align: center;
+    margin: 2px;
+    color: $color2;
+    font-family:'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    animation-duration: 2s;
+    animation-name: aparece;
+    animation-delay: 4s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite ;
+  }
+  @keyframes aparece {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.galeria-descubrir {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-image: $color3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+
+@media only screen and (max-width: 680px){
+    .galeria-descubrir {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+/*Productos*/
+.titulo-productos {
+    grid-area: titulo;
+    font-size: 40px;
+    text-align: center;
+    margin: 2px;
+    color: $color2;
+    font-family:'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    animation-duration: 2s;
+    animation-name: aparece;
+    animation-delay: 4s;
+    animation-direction:alternate;
+    animation-iteration-count: infinite ;
+  }
+  @keyframes aparece {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.galeria {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-image: $color3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px
+}
+@media only screen and (max-width: 1100px){
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto
+        }
+    }
+    @media only screen and (max-width: 620px){
+        .galeria {
+            grid-template-columns: 1fr;
+            grid-template-rows:auto
+        }
+    }
