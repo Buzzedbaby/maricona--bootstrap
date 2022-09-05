@@ -195,7 +195,7 @@ ul li {
   background-color: lightskyblue;
 }
 
-.título-contacto {
+.título-contacto, .titulo-productos, .titulo-descubrir, .título-nosotros {
   font-size: 40px;
   text-align: center;
   margin: 2px;
@@ -237,18 +237,6 @@ ul li {
   text-align: center;
 }
 
-.título-nosotros {
-  font-size: 40px;
-  text-align: center;
-  font-family: "Share Tech Mono", monospace;
-  color: yellow;
-  text-transform: uppercase;
-  animation-duration: 2s;
-  animation-name: aparece;
-  animation-delay: 4s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-}
 .título-nosotros .titulonosotros {
   grid-area: titulo;
 }
@@ -278,20 +266,101 @@ ul li {
   vertical-align: middle;
 }
 
+.mapa--red {
+  display: inline-block;
+  background-color: lightskyblue;
+  height: 70px;
+  width: 150px;
+  border: 1px solid pink;
+  text-align: center;
+  font-size: 15px;
+  color: red;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.mapa--orange {
+  display: inline-block;
+  background-color: lightskyblue;
+  height: 70px;
+  width: 150px;
+  border: 2px solid pink;
+  text-align: center;
+  font-size: 15px;
+  color: orange;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.mapa--violet {
+  display: inline-block;
+  background-color: lightskyblue;
+  height: 70px;
+  width: 150px;
+  border: 3px solid pink;
+  text-align: center;
+  font-size: 15px;
+  color: violet;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.mapa--green {
+  display: inline-block;
+  background-color: lightskyblue;
+  height: 70px;
+  width: 150px;
+  border: 4px solid pink;
+  text-align: center;
+  font-size: 15px;
+  color: green;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.mix1 {
+  height: 150px;
+  width: 150px;
+  background-image: linear-gradient(yellow, lightskyblue, pink);
+  display: inline-block;
+  border: 2px solid pink;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.mix2 {
+  height: 150px;
+  width: 150px;
+  background-image: linear-gradient(yellow, lightskyblue, pink);
+  display: inline-block;
+  border: 2px solid pink;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.mix3 {
+  height: 150px;
+  width: 150px;
+  background-image: linear-gradient(yellow, lightskyblue, pink);
+  display: inline-block;
+  border: 2px solid pink;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.mix4 {
+  height: 150px;
+  width: 150px;
+  background-image: linear-gradient(yellow, lightskyblue, pink);
+  display: inline-block;
+  border: 2px solid pink;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 /*Descubrir*/
 .titulo-descubrir {
   grid-area: titulo;
-  font-size: 40px;
-  text-align: center;
-  margin: 2px;
-  color: yellow;
-  font-family: "Share Tech Mono", monospace;
-  text-transform: uppercase;
-  animation-duration: 2s;
-  animation-name: aparece;
-  animation-delay: 4s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
 }
 
 @keyframes aparece {
@@ -348,41 +417,8 @@ ul li {
     grid-template-rows: auto;
   }
 }
-/*.galeria-descubrir {
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    background-image: $color3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    align-items: center;
-    vertical-align: middle;
-    text-align: center;
-}
-
-@media only screen and (max-width: 680px){
-    .galeria-descubrir {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-}*/
-/*Productos*/
 .titulo-productos {
   grid-area: titulo;
-  font-size: 40px;
-  text-align: center;
-  margin: 2px;
-  color: yellow;
-  font-family: "Share Tech Mono", monospace;
-  text-transform: uppercase;
-  animation-duration: 2s;
-  animation-name: aparece;
-  animation-delay: 4s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
 }
 
 @keyframes aparece {

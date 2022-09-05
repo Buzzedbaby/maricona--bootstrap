@@ -215,7 +215,7 @@ $color3: linear-gradient(yellow , lightskyblue , pink);
     font-size: 40px;
     text-align: center;
     margin: 2px;
-    color: yellow;
+    color: $color2;
     font-family:'Share Tech Mono', monospace;
     text-transform: uppercase;
     animation-duration: 2s;
@@ -254,16 +254,7 @@ $color3: linear-gradient(yellow , lightskyblue , pink);
         text-align: center;
 }
 .título-nosotros {
-    font-size: 40px;
-    text-align: center;
-    font-family:'Share Tech Mono', monospace;
-    color: yellow;
-    text-transform: uppercase;
-    animation-duration: 2s;
-    animation-name: aparece;
-    animation-delay: 4s;
-    animation-direction:alternate;
-    animation-iteration-count: infinite ;
+    @extend .título-contacto;
 
     .titulonosotros {
         grid-area: titulo;
@@ -294,20 +285,67 @@ $color3: linear-gradient(yellow , lightskyblue , pink);
     grid-area: foto;
     vertical-align: middle;
 }
+$productos: (
+    1px: red,
+    2px: orange,
+    3px: violet,
+    4px: green
+);
+@each $border, $color in $productos {
+    .mapa--#{$color} {
+        display: inline-block;
+        background-color: $color1;
+        height: 70px;
+        width: 150px;
+        border: $border solid pink;
+        text-align: center;
+        font-size: 15px;
+        color: $color;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+@mixin color {
+    height: 150px;
+    width: 150px;
+    background-image: $color3;
+    
+}
+.mix1{
+    @include color;
+    display: inline-block;
+    border: 2px solid pink;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.mix2{
+    @include color;
+    display: inline-block;
+    border: 2px solid pink;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.mix3{
+    @include color;
+    display: inline-block;
+    border: 2px solid pink;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.mix4{
+    @include color;
+    display: inline-block;
+    border: 2px solid pink;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 /*Descubrir*/
 .titulo-descubrir {
     grid-area: titulo;
-    font-size: 40px;
-    text-align: center;
-    margin: 2px;
-    color: $color2;
-    font-family:'Share Tech Mono', monospace;
-    text-transform: uppercase;
-    animation-duration: 2s;
-    animation-name: aparece;
-    animation-delay: 4s;
-    animation-direction:alternate;
-    animation-iteration-count: infinite ;
+    @extend .título-contacto;
   }
   @keyframes aparece {
     0%{
@@ -368,41 +406,9 @@ $color3: linear-gradient(yellow , lightskyblue , pink);
         grid-template-rows: auto;
     }
 }
-/*.galeria-descubrir {
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    background-image: $color3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    align-items: center;
-    vertical-align: middle;
-    text-align: center;
-}
-
-@media only screen and (max-width: 680px){
-    .galeria-descubrir {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-}*/
-/*Productos*/
 .titulo-productos {
     grid-area: titulo;
-    font-size: 40px;
-    text-align: center;
-    margin: 2px;
-    color: $color2;
-    font-family:'Share Tech Mono', monospace;
-    text-transform: uppercase;
-    animation-duration: 2s;
-    animation-name: aparece;
-    animation-delay: 4s;
-    animation-direction:alternate;
-    animation-iteration-count: infinite ;
+    @extend .título-contacto;
   }
   @keyframes aparece {
     0%{
