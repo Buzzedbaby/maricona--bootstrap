@@ -10,103 +10,118 @@
     <link rel="stylesheet" href="../estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <title>Maricona</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="barra-arriba">
-        <nav class="navbar navbar-expand-xl navbar-light" style="background-color: #ffc0cb ;">
-          <a class="navbar-brand">MARICONA</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav" >
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="../index.html">HOME <span class="sr-only"></span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">CONTACTO</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="nosotros.html">NOSOTROS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="productos.html">PRODUCTOS</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-    </div>
-    <div id="descubrir-grilla">
-        <h3 class="titulo-descubrir">NUEVA COLECCIÓN</h3>
-        
-      <div class="card mb-5" style="max-width: 250px;" class="item1">
-        <div class="row no-gutters">
-          <div class="col-md-5">
-            <img src="../imagenes/Campera flores rosa.jpeg" alt="300" height="auto" width="250">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">CAMPERA FLORONES ROSA</h5>
-              <p class="card-text">Campera rosada con flores en alto relieve.</p>
-              <p class="card-text"><small class="text-muted">Nueva colección</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="card mb-5" style="max-width: 250px;" class="item2">
-        <div class="row no-gutters">
-          <div class="col-md-5">
-            <img src="../imagenes/Campera Flores.jpg" alt="300" height="auto" width="250">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">CAMPERA FLORES</h5>
-              <p class="card-text">Campera oversize con flores grandes.</p>
-              <p class="card-text"><small class="text-muted">Nueva colección</small></p>
-            </div>
-          </div>
-        </div>
+    <!-- Menú de mavegación-->
+    <nav id="barra-arriba" class="navbar navbar-expand-xl navbar-light" style="background-color: #ffc0cb ;">
+      <a class="navbar-brand">MARICONA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" >
+       <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="../index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">CONTACTO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nosotros.html">NOSOTROS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html">PRODUCTOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="descubrir.html">DESCUBRIR</a>
+          </li>
+          </ul>
       </div>
+    </nav>
 
-      <div class="card mb-5" style="max-width: 250px;"  class="item3">
-        <div class="row no-gutters">
-          <div class="col-md-5">
-            <img src="../imagenes/Chaleco nubes.jpg" alt="300" height="auto" width="250">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">CHALECO NUBES</h5>
-              <p class="card-text">Chaleco con detalle de nubes.</p>
-              <p class="card-text"><small class="text-muted">Nueva colección</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mb-5" style="max-width: 250px;"  class="item4">
-        <div class="row no-gutters">
-          <div class="col-md-5">
-            <img src="../imagenes/Chaleco campo.jpg" alt="300" height="auto" width="250">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">CHALECO CAMPO</h5>
-              <p class="card-text">Chaleco con diseño de campo.</p>
-              <p class="card-text"><small class="text-muted">Nueva colección</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- Cards Descubrir-->
+  <main id="descubrir-principal" class="container-fluid p-0 descubrir">
+    <header>
+      <h1 class="titulo-descubrir">🧶 NUEVA COLECCIÓN</h1>
+    </header>
+
+    <div class="container">
+
+    <div class="card">
+      <img src="../imagenes/Campera flores rosa.jpeg" alt="300">
+      <h4>CAMPERA FLORONES ROSA</h4>
+      <p>Campera rosada con flores en alto relieve.</p>
+      <a href="#">QUIERO VER MÁS</a>
     </div>
-    <footer class="footer" id="Maricona">
-      <h5>Maricona <br>Realizamos prendas de diseño en crochet</h5>
-      <h5>info@maricona.com.ar</h5>
-      <nav>
-        <a href="https://www.instagram.com/">Instagram</a>
-        <a href="https://www.facebook.com/">facebook</a>
-        </nav>
-    </footer>
-  
+
+    <div class="card">
+      <img src="../imagenes/Campera Flores.jpg" alt="300">
+      <h4>CAMPERA FLORES</h4>
+      <p>Campera oversize con flores grandes.</p>
+      <a href="#">QUIERO VER MÁS</a>
+    </div>
+
+    <div class="card">
+      <img src="../imagenes/Chaleco nubes.jpg" alt="300">
+      <h4>CHALECO NUBES</h4>
+      <p>Chaleco con detalle de nubes.</p>
+      <a href="#">QUIERO VER MÁS</a>
+    </div>
+
+    <div class="card">
+      <img src="../imagenes/Chaleco campo.jpg" alt="300">
+      <h4>CHALECO CAMPO</h4>
+      <p>Chaleco con diseño de campo.</p>
+      <a href="#">QUIERO VER MÁS</a>
+    </div>
+
+    <div class="card">
+      <img src="../imagenes/Sueter abrigado.jpg" alt="300">
+      <h4>CAMPERA FLORONES ROSA</h4>
+      <p>Campera rosada con flores en alto relieve.</p>
+      <a href="#">QUIERO VER MÁS</a>
+    </div>
+
+    <div class="card">
+      <img src="../imagenes/Sueter verde flores.jpg" alt="300">
+      <h4>CAMPERA FLORONES ROSA</h4>
+      <p>Campera rosada con flores en alto relieve.</p>
+      <a href="#">QUIERO VER MÁS</a>
+    </div>
+  </div>
+  </main>
+
+  <!-- Pie de página-->
+  <footer class="footer">
+	  <div class="grupo-1">
+      <div class="box">
+        <figure>
+          <a href="#">
+            <img src="../imagenes/maricona.logo.png" alt="Logo Maricona">
+          </a>
+        </figure>
+      </div>
+      <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+        <P>Prendas realizadas 100% a mano. <br>
+          Productos cuidadosamente confeccionados de alta calidad.
+        </P>
+      </div>
+      <div class="box">
+        <h2>ENCONTRANOS ACÁ</h2>
+        <div class="redes">
+          <a href="#" class="fa-brands fa-facebook"></a>
+          <a href="#" class="fa-brands fa-instagram"></a>
+          <a href="#" class="fa-brands fa-pinterest"></a>
+        </div>
+      </div>
+	  </div>
+  </footer>
+
+
+  <!-- Magic Here! -->  
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>

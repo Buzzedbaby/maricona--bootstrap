@@ -12,12 +12,23 @@ ul li {
   text-align: center;
   margin-left: 130px;
   font-size: 20px;
-  font-family: "Share Tech Mono", monospace;
-  text-align: center;
 }
 
 /*Index*/
-.barra-vertical {
+#barra-arriba {
+  background-color: pink;
+}
+
+#grilla {
+  display: grid;
+  grid-template-areas: "vertical  foto   titulo" "vertical  foto   subtitulo" "vertical  foto   boton" "vertical  abajo  abajo";
+  grid-template-columns: 10% 40% 50%;
+  grid-template-rows: auto;
+  background-color: lightskyblue;
+  margin: 0px;
+}
+
+#nuevos {
   display: flex;
   grid-area: vertical;
   background-image: linear-gradient(yellow, lightskyblue, pink);
@@ -27,60 +38,85 @@ ul li {
   font-size: 35px;
   font-family: "Share Tech Mono", monospace;
   margin: 0px;
+  height: auto;
 }
-.barra-vertical .texto-vertical {
+#nuevos .texto-vertical {
   transform: rotate(270deg);
   white-space: nowrap;
+  transition: transform 1s;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+#nuevos .texto-vertical:hover {
+  translate: 5px;
 }
 
-.nueva-generación {
+header {
   grid-area: titulo;
+}
+header .nueva-generación {
   font-size: 60px;
   font-family: "Share Tech Mono", monospace;
-  font-weight: 600;
+  white-space: nowrap;
+  font-weight: 800;
   height: 10%;
   color: yellow;
   text-align: center;
-  text-transform: uppercase;
-  animation-duration: 2s;
-  animation-name: aparece;
-  animation-delay: 4s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
+}
+header .nueva-generación:hover {
+  color: fuchsia;
+  transform: translateY(10px);
 }
 
-@keyframes aparece {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+#subtitulo {
+  grid-area: subtitulo;
 }
-.subtitulo {
-  grid-area: section;
+#subtitulo .subtitulo {
   font-size: 30px;
   font-family: "Share Tech Mono", monospace;
   font-weight: 600;
   color: white;
   text-align: center;
 }
+#subtitulo .subtitulo:hover {
+  color: yellow;
+  border-color: black 1px solid;
+  transform: translateY(10px);
+}
 
-.boton-descubrir {
+#descubrir {
   grid-area: boton;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+#descubrir .boton-descubrir {
   font-size: 30px;
   font-family: "Share Tech Mono", monospace;
   font-weight: 60px;
   background-color: pink;
+  color: fuchsia;
+  border: 5px solid yellow;
+}
+#descubrir .boton-descubrir:hover {
+  border: 10px solid yellow;
 }
 
-.imagen-portada {
+#imagen {
   grid-area: foto;
+  display: flex;
+  justify-content: center;
+}
+#imagen .imagen-portada {
   background-position: center;
   vertical-align: middle;
 }
+#imagen .imagen-portada:hover {
+  border: yellow solid 5px;
+  transform: translateX(40px);
+}
 
-.barra-abajo {
+#descuento {
   grid-area: abajo;
   background-image: linear-gradient(yellow, lightskyblue, pink);
   width: 100%;
@@ -92,16 +128,69 @@ ul li {
   width: auto;
   padding: 10px;
 }
-
-#grilla {
-  display: grid;
-  grid-template-areas: "vertical foto titulo" "vertical foto subtitulo" "vertical foto boton" "vertical abajo abajo";
-  grid-template-columns: 10% 40% 50%;
-  grid-template-rows: auto;
-  background-color: lightskyblue;
-  margin: 0px;
+#descuento .barra-abajo {
+  transition: transform 1s;
+}
+#descuento .barra-abajo:hover {
+  transform: translateY(40px);
 }
 
+.footer {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 16px;
+  text-align: center;
+  background-color: pink;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.footer .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px opx;
+}
+
+.footer .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .grupo-1 .box figure img {
+  width: 200px;
+  border: 4px solid yellow;
+}
+
+.footer .grupo-1 .box h2 {
+  margin-bottom: 25px;
+  font-size: 20px;
+  border: 1px solid yellow;
+}
+
+.footer .grupo-1 .redes a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: black;
+  margin-right: 10px;
+  background-color: lightskyblue;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.footer .grupo-1 .redes a:hover {
+  color: fuchsia;
+}
+
+/*Media querie*/
 @media only screen and (max-width: 950px) {
   #grilla {
     grid-template-areas: "vertical titulo" "vertical subtitulo" "vertical boton" "vertical foto" "abajo abajo ";
@@ -115,35 +204,61 @@ ul li {
   }
 }
 @media only screen and (max-width: 520px) {
-  #grilla {
-    grid-template-areas: "vertical titulo" "vertical subtitulo" "vertical boton" "vertical foto" "abajo abajo ";
-    grid-template-columns: 10% 90%;
-    grid-template-rows: 150px 70px 150px 400px 150px;
-    background-color: lightskyblue;
-    margin: 0px;
+  header {
+    grid-area: titulo;
+  }
+  header .nueva-generación {
+    font-size: 40px;
+    font-family: "Share Tech Mono", monospace;
+    white-space: nowrap;
+    font-weight: 800;
+    height: 10%;
+    color: yellow;
+    text-align: center;
   }
   .imagen-portada {
     align-self: center;
-    height: 300px;
+    height: 360px;
     width: auto;
   }
-  .barra-abajo {
-    height: 150px;
-  }
-  .nueva-generación {
+}
+@media only screen and (max-width: 300px) {
+  header {
     grid-area: titulo;
+  }
+  header .nueva-generación {
     font-size: 40px;
+    font-family: "Share Tech Mono", monospace;
+    white-space: nowrap;
+    font-weight: 800;
+    height: 10%;
+    color: yellow;
+    text-align: center;
+  }
+  #subtitulo {
+    grid-area: subtitulo;
+  }
+  #subtitulo .subtitulo {
+    font-size: 25px;
+    font-family: "Share Tech Mono", monospace;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+  }
+  .imagen-portada {
+    align-self: center;
+    height: 290px;
+    width: auto;
   }
 }
-.footer {
-  grid-area: footer;
-  font-family: "Share Tech Mono", monospace;
-  font-size: 20px;
-  text-align: center;
-  background-color: pink;
-  width: 100%;
+@media only screen and (max-width: 800px) {
+  .footer .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px opx;
+  }
 }
-
 /*Contacto*/
 #grilla-contacto {
   display: grid;
@@ -152,50 +267,23 @@ ul li {
   background-color: lightskyblue;
 }
 
-@media only screen and (max-width: 1005px) {
-  #grilla-contacto {
-    display: grid;
-    grid-template-areas: "titulo" "formulario" "pregunta" "foto";
-    grid-template-columns: 1fr;
-    background-color: lightskyblue;
-  }
-  .portada-contacto {
-    background-color: lightskyblue;
-    width: 100%;
-    height: auto;
-  }
-}
-@media only screen and (max-width: 650px) {
-  #grilla-contacto {
-    display: grid;
-    grid-template-areas: "titulo" "formulario" "pregunta" "foto";
-    grid-template-columns: 1fr;
-    background-color: lightskyblue;
-  }
-  .portada-contacto {
-    background-color: lightskyblue;
-    width: 100%;
-    height: auto;
-  }
-  .formulario-contacto {
-    grid-area: formulario;
-    background-color: deeppink;
-    font-family: "Share Tech Mono", monospace;
-    font-size: 16px;
-  }
-}
 .portada-contacto {
   background-color: lightskyblue;
   width: 100%;
   height: auto;
 }
 
-.titulo-contacto.grid {
-  grid-area: titulo;
-  background-color: lightskyblue;
+.formulario-contacto {
+  grid-area: formulario;
+  background-image: linear-gradient(pink, lightskyblue, yellow);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 16px;
+  margin: 40px;
+  padding: 20px;
 }
 
 .título-contacto, .titulo-productos, .titulo-descubrir, .título-nosotros {
+  grid-area: titulo;
   font-size: 40px;
   text-align: center;
   margin: 2px;
@@ -217,15 +305,22 @@ ul li {
     opacity: 1;
   }
 }
-.formulario-contacto {
-  grid-area: formulario;
-  background-image: linear-gradient(pink, lightskyblue, yellow);
-  font-family: "Share Tech Mono", monospace;
-  font-size: 16px;
-  margin-top: 20px;
-  padding: 20px;
+/*Media querie*/
+@media only screen and (max-width: 500px) {
+  #grilla-contacto {
+    display: grid;
+    grid-template-areas: "titulo" "formulario";
+    grid-template-columns: 1fr;
+    background-color: lightskyblue;
+  }
+  .formulario-contacto {
+    grid-area: formulario;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 16px;
+    margin: 30px 5px 30px 5px;
+    padding: 5px;
+  }
 }
-
 /*Nosotros*/
 #grilla-nosotros {
   display: grid;
@@ -249,118 +344,38 @@ ul li {
   }
 }
 
-.parrafonosotros {
+#parrafonosotros {
   grid-area: parrafo;
-  margin: 50px;
-  text-align: justify;
+  margin: 30px;
+  text-align: center;
   font-size: 20px;
   font-family: "Share Tech Mono", monospace;
+  align-items: center;
 }
-.parrafonosotros .parrafo-nosotros {
+#parrafonosotros .parrafo-nosotros {
   grid-area: parrafo;
   width: 100%;
 }
 
-.imagen-nosotros {
-  grid-area: foto;
-  vertical-align: middle;
+/*Media querie*/
+@media only screen and (max-width: 400px) {
+  #parrafonosotros {
+    grid-area: parrafo;
+    margin: 10px;
+    padding: auto;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Share Tech Mono", monospace;
+  }
+  #parrafonosotros .parrafo-nosotros {
+    grid-area: parrafo;
+    width: 100%;
+    margin-top: 30px;
+  }
 }
-
-.mapa--red {
-  display: inline-block;
-  background-color: lightskyblue;
-  height: 70px;
-  width: 150px;
-  border: 1px solid pink;
-  text-align: center;
-  font-size: 15px;
-  color: red;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.mapa--orange {
-  display: inline-block;
-  background-color: lightskyblue;
-  height: 70px;
-  width: 150px;
-  border: 2px solid pink;
-  text-align: center;
-  font-size: 15px;
-  color: orange;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.mapa--violet {
-  display: inline-block;
-  background-color: lightskyblue;
-  height: 70px;
-  width: 150px;
-  border: 3px solid pink;
-  text-align: center;
-  font-size: 15px;
-  color: violet;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.mapa--green {
-  display: inline-block;
-  background-color: lightskyblue;
-  height: 70px;
-  width: 150px;
-  border: 4px solid pink;
-  text-align: center;
-  font-size: 15px;
-  color: green;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.mix1 {
-  height: 150px;
-  width: 150px;
-  background-image: linear-gradient(yellow, lightskyblue, pink);
-  display: inline-block;
-  border: 2px solid pink;
-  text-align: center;
-  font-size: 15px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.mix2 {
-  height: 150px;
-  width: 150px;
-  background-image: linear-gradient(yellow, lightskyblue, pink);
-  display: inline-block;
-  border: 2px solid pink;
-  text-align: center;
-  font-size: 15px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.mix3 {
-  height: 150px;
-  width: 150px;
-  background-image: linear-gradient(yellow, lightskyblue, pink);
-  display: inline-block;
-  border: 2px solid pink;
-  text-align: center;
-  font-size: 15px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.mix4 {
-  height: 150px;
-  width: 150px;
-  background-image: linear-gradient(yellow, lightskyblue, pink);
-  display: inline-block;
-  border: 2px solid pink;
-  text-align: center;
-  font-size: 15px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
 /*Descubrir*/
-.titulo-descubrir {
-  grid-area: titulo;
+#descubrir-principal {
+  background-image: linear-gradient(lightskyblue, pink);
 }
 
 @keyframes aparece {
@@ -371,54 +386,60 @@ ul li {
     opacity: 1;
   }
 }
-.item1 {
-  grid-area: item1;
-  justify-items: center;
-  background-image: linear-gradient(yellow, lightskyblue, pink);
+.container {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
 }
 
-.item2 {
-  grid-area: item2;
-  justify-items: center;
+.container .card {
+  width: 300px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: o 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+  background-image: linear-gradient(lightskyblue, black, white, pink, yellow);
 }
 
-.item3 {
-  grid-area: item3;
-  justify-items: center;
+.container .card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
-.item4 {
-  grid-area: item4;
-  justify-items: center;
+.container .card img {
+  width: 300px;
+  height: auto;
 }
 
-#descubrir-grilla {
-  display: grid;
-  grid-template-areas: "titulo titulo titulo titulo" "item1 item2 item3 item4";
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  background-color: lightskyblue;
-  grid-gap: 5px;
-  min-height: 100vh;
-  justify-items: center;
+.container .card h4 {
+  font-weight: 600;
+  font-family: "Share Tech Mono", monospace;
 }
 
-@media only screen and (max-width: 1100px) {
-  #descubrir-grilla {
-    grid-template-areas: "titulo titulo" "item1 item2" "item3 item4";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
+.container .card p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Share Tech Mono", monospace;
 }
-@media only screen and (max-width: 600px) {
-  #descubrir-grilla {
-    grid-template-areas: "titulo" "item1" "item2" "item3" "item4";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
+
+.container .card a {
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  font-family: "Share Tech Mono", monospace;
 }
-.titulo-productos {
-  grid-area: titulo;
+
+/*Productos*/
+#galeria-productos {
+  background-image: linear-gradient(lightskyblue, pink);
 }
 
 @keyframes aparece {
@@ -429,50 +450,99 @@ ul li {
     opacity: 1;
   }
 }
-.foto1productos {
-  grid-area: foto1;
-  justify-items: center;
-}
-
-.foto2productos {
-  grid-area: foto2;
-  justify-items: center;
-}
-
-.foto3productos {
-  grid-area: foto3;
-  justify-items: center;
-}
-
-.foto4productos {
-  grid-area: foto4;
-  justify-items: center;
-}
-
-#galeria {
-  display: grid;
-  grid-template-areas: "titulo titulo titulo titulo" "foto1 foto2 foto3 foto4";
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  background-color: lightskyblue;
-  grid-gap: 10px;
+.container-productos {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  align-items: center;
   min-height: 100vh;
-  justify-items: center;
+  justify-content: center;
+  margin: auto;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 1180px) {
-  #galeria {
-    grid-template-areas: "titulo titulo" "foto1 foto2" "foto3 foto4";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
+.cardproductos {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
 }
-@media only screen and (max-width: 620px) {
-  #galeria {
-    grid-template-areas: "titulo" "foto1" "foto2" "foto3" "foto4";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
+
+.cardproductos .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.cardproductos .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px yellow;
+}
+
+.cardproductos .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardproductos .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: pink;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.cardproductos .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: pink;
+  padding: 15px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px pink;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.cardproductos .back .link {
+  border-top: solid 1px yellow;
+  height: 50px;
+  line-height: 50px;
+}
+
+.cardproductos .back .link a {
+  color: black;
+}
+
+.cardproductos .back .h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.cardproductos .back .p {
+  letter-spacing: 1px;
+}
+
+.cardproductos:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.cardproductos:hover .back {
+  transform: perspective(600px) rotateY(360deg);
 }
 
 /*# sourceMappingURL=estilos.css.map */
